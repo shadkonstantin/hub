@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,sans-serif; background:#0a0a0f; color:#ecf0f1; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:20px; }
+.card { background:#1a1a2e; border-radius:16px; padding:24px; width:100%; max-width:320px; text-align:center; cursor:pointer; border:1px solid rgba(255,255,255,0.08); text-decoration:none; color:inherit; }
+.card .icon { font-size:48px; margin-bottom:12px; }
+.card h2 { font-size:18px; margin-bottom:4px; }
+.card p { font-size:13px; opacity:.6; }
+.card.server { border-left:3px solid #8b5cf6; }
+.card.receipts { border-left:3px solid #2ecc71; }
+h1 { font-size:22px; margin-bottom:4px; }
+.sub { font-size:13px; opacity:.5; margin-bottom:24px; }
+</style>
+</head>
+<body>
+<h1>Мои дашборды</h1>
+<p class="sub">Выберите раздел</p>
+<a class="card server" href="https://shadkonstantin.github.io/server-app/">
+<div class="icon">S</div><h2>Сервер</h2><p>CPU RAM Disk Security</p>
+</a>
+<a class="card receipts" href="https://shadkonstantin.github.io/receipt-app/">
+<div class="icon">R</div><h2>Чеки</h2><p>Expenses Categories Trends</p>
+</a>
+<script>
+var tg=window.Telegram&&window.Telegram.WebApp;if(tg){tg.ready();tg.expand()}
+</script>
+</body>
+</html>
